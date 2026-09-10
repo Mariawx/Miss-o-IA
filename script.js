@@ -36,17 +36,17 @@ const perguntas = [
             ]
         },
         {
-            enunciado: "Hoje em dia é cada vez mais importante conhecer o seu corpo, suas qualidades, suas limitações e entender suas emoções. Saber controlá-las é o desafio das pessoas. A sua auto-estima impacta a sua qualidade de vida?",
+            enunciado: "Qual critério você considera indiscutível antes de fechar qualquer protocolo de estética avançada?",
 
             alternativas: [
                 {
-                    texto: "Na maior parte do tempo, com certeza impacta, pois é a partir da autoestima que temos um olhar positivo ou negativo sobre nossas ações diárias. Sempre estou em busca de mais autoconhecimento.",
-                    afirmacao: "Você tem consciência que é importante ter uma boa auto-estima e procura se aprofundar mais sobre o assunto, vendo a vida de um jeito positivo."
+                    texto: "Exigir a comprovação de registro profissional específico (CRM, CRBM, CFF) e a liberação de vigilância sanitária da clínica.",
+                    afirmacao: "O Defensor da Biossegurança. Prioriza a segurança jurídica e sanitária para minimizar qualquer risco à integridade física"
                 },
                 {
-                    texto:    "Apenas ocasionalmente ou raramente. Às vezes minha autoestima oscila e isso pode afetar negativamente minha qualidade de vida em certas ocasiões.",
+                    texto:    "Analisar o portfólio de casos reais de "antes e depois" e as avaliações de outros clientes sobre o profissional.",
                
-                    afirmacao: "Você demomostra que precisa se conhecer mais e mostra uma consciência de uma crescente necessidade de cuidar mais da própria percepção e bem-estar emocional."
+                    afirmacao: "O Avaliador de Resultados. Focado na reputação prática do profissional e na consistência visual dos trabalhos entregues."
                 }    
                
             ]
