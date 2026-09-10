@@ -1,19 +1,23 @@
+/* =========================================
+   1. VARIÁVEIS E CORES (Paleta Roxa Dinâmica)
+   ========================================= */
 :root {
-  /* Paleta em tons de roxo escuro e vibrante */
   --cor-fundo: #0a0314;
   --cor-principal: #18082b;
   --cor-secundaria: #2b104a;
   --cor-destaque: #a855f7;
   --cor-destaque-brilho: #e0aaff;
   --cor-texto: #f3e8ff;
-  --cor-surpresa: #ff007f;
+  --cor-surpresa: #ff007f; /* Rosa choque para dar um susto legal */
 }
 
-/* Fundo com gradiente roxo escuro dinâmico e animado */
+/* =========================================
+   2. ESTILOS GERAIS (Tags HTML)
+   ========================================= */
 body {
   background: linear-gradient(-45deg, #0a0314, #18082b, #25063ca8, #0d011a);
   background-size: 400% 400%;
-  animation: fundoMágico 12s ease infinite;
+  animation: fundoMagico 12s ease infinite;
   color: var(--cor-texto);
   display: flex;
   justify-content: center;
@@ -24,37 +28,9 @@ body {
   overflow: hidden;
 }
 
-/* Animação do fundo suave */
-@keyframes fundoMágico {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Caixa principal flutuante com borda divertida e sombra néon */
-.caixa-principal {
-  background-color: var(--cor-principal);
-  width: 85%;
-  max-width: 500px;
-  text-align: center;
-  padding: 40px 30px;
-  border-radius: 35px 15px 35px 15px; /* Bordas levemente tiradas do eixo para ar engraçado */
-  border: 3px solid var(--cor-secundaria);
-  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25), 
-              0 0 15px rgba(168, 85, 247, 0.15);
-  animation: flutuar 4s ease-in-out infinite;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Efeito ao passar o mouse na caixa: uma leve inclinada cômica */
-.caixa-principal:hover {
-  transform: rotate(-1.5deg) scale(1.02);
-}
-
-/* Título com brilho e tremedeira divertida ao passar o mouse */
 h1 {
   color: var(--cor-destaque);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   text-shadow: 0 0 10px var(--cor-destaque), 0 0 20px rgba(168, 85, 247, 0.5);
   margin-bottom: 25px;
   cursor: pointer;
@@ -67,7 +43,7 @@ h1:hover {
   animation: dancinha 0.5s ease-in-out infinite alternate;
 }
 
-/* Botão super elástico (estilo chiclete/gelatina) */
+/* Os botões das alternativas que o JavaScript vai gerar */
 button {
   background-color: var(--cor-secundaria);
   color: var(--cor-destaque-brilho);
@@ -79,33 +55,102 @@ button {
   cursor: pointer;
   outline: none;
   box-shadow: 0 6px 0px var(--cor-destaque);
-  /* Física estilo mola/chiclete */
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  position: relative;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efeito elástico */
+  width: 100%;
 }
 
-/* Hover no botão: ele pula, se inclina e brilha! */
 button:hover {
   background-color: var(--cor-destaque);
   color: var(--cor-fundo);
-  transform: translateY(-7deg) rotate(3deg) scale(1.1);
-  box-shadow: 0 12px 20px rgba(168, 85, 247, 0.6),
-              0 0 15px var(--cor-surpresa);
+  transform: translateY(-5px) rotate(2deg) scale(1.05);
+  box-shadow: 0 12px 20px rgba(168, 85, 247, 0.6), 0 0 15px var(--cor-surpresa);
 }
 
-/* Clique no botão: ele achata feio feito chiclete pisado! */
 button:active {
-  transform: translateY(3deg) scale(0.9, 0.8) rotate(-2deg);
+  transform: translateY(3px) scale(0.95) rotate(-2deg);
   box-shadow: 0 2px 0px var(--cor-destaque);
 }
 
-/* Keyframes de animações engraçadas */
+/* =========================================
+   3. CLASSES DO PROJETO (Layout e Caixas)
+   ========================================= */
+
+/* Caixa principal que engloba tudo */
+.caixa-principal {
+  background-color: var(--cor-principal);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 35px 15px 35px 15px; /* Formato engraçado e tortinho */
+  border: 3px solid var(--cor-secundaria);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25), 0 0 15px rgba(168, 85, 247, 0.15);
+  animation: flutuar 4s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.caixa-principal:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+/* Área onde a pergunta vai aparecer */
+.caixa-perguntas {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--cor-destaque-brilho);
+  margin-bottom: 20px;
+}
+
+/* Organização dos botões de alternativas */
+.caixa-alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os botões */
+  margin-bottom: 20px;
+}
+
+/* Caixa onde o resultado final aparece (pode virar uma surpresa!) */
+.caixa-resultado {
+  background-color: var(--cor-secundaria);
+  border: 2px dashed var(--cor-destaque);
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
+  /* Geralmente o display é controlado pelo script.js para aparecer só no final, 
+     mas deixei uma animação pronta para quando ele surgir! */
+  animation: aparecerGelatina 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Texto final do resultado */
+.texto-resultado {
+  font-size: 1.2rem;
+  color: var(--cor-surpresa);
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+}
+
+/* =========================================
+   4. ANIMAÇÕES (Keyframes divertidos)
+   ========================================= */
+
+@keyframes fundoMagico {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes flutuar {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-12px); }
 }
 
 @keyframes dancinha {
-  0% { transform: rotate(-5deg) scale(1.05); }
-  100% { transform: rotate(5deg) scale(1.1); }
+  0% { transform: rotate(-3deg) scale(1.02); }
+  100% { transform: rotate(3deg) scale(1.08); }
+}
+
+@keyframes aparecerGelatina {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
 }
