@@ -1,36 +1,111 @@
 :root {
-  --cor-fundo: #01080E;
-  --cor-principal: #0B0D20;
-  --cor-secundaria: #212333;
-  --cor-destaque: #6b0cb8;
-  --cor-texto: #D7F9FF;
+  /* Paleta em tons de roxo escuro e vibrante */
+  --cor-fundo: #0a0314;
+  --cor-principal: #18082b;
+  --cor-secundaria: #2b104a;
+  --cor-destaque: #a855f7;
+  --cor-destaque-brilho: #e0aaff;
+  --cor-texto: #f3e8ff;
+  --cor-surpresa: #ff007f;
 }
+
+/* Fundo com gradiente roxo escuro dinâmico e animado */
 body {
-  background-color: var(--cor-fundo);
+  background: linear-gradient(-45deg, #0a0314, #18082b, #25063ca8, #0d011a);
+  background-size: 400% 400%;
+  animation: fundoMágico 12s ease infinite;
   color: var(--cor-texto);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
+  font-family: 'Fredoka', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  overflow: hidden;
 }
+
+/* Animação do fundo suave */
+@keyframes fundoMágico {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Caixa principal flutuante com borda divertida e sombra néon */
 .caixa-principal {
   background-color: var(--cor-principal);
-  width: 90%;
+  width: 85%;
+  max-width: 500px;
   text-align: center;
-  padding: 20px;
+  padding: 40px 30px;
+  border-radius: 35px 15px 35px 15px; /* Bordas levemente tiradas do eixo para ar engraçado */
+  border: 3px solid var(--cor-secundaria);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25), 
+              0 0 15px rgba(168, 85, 247, 0.15);
+  animation: flutuar 4s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+/* Efeito ao passar o mouse na caixa: uma leve inclinada cômica */
+.caixa-principal:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+/* Título com brilho e tremedeira divertida ao passar o mouse */
 h1 {
   color: var(--cor-destaque);
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px var(--cor-destaque), 0 0 20px rgba(168, 85, 247, 0.5);
+  margin-bottom: 25px;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s;
 }
+
+h1:hover {
+  color: var(--cor-destaque-brilho);
+  animation: dancinha 0.5s ease-in-out infinite alternate;
+}
+
+/* Botão super elástico (estilo chiclete/gelatina) */
 button {
-  background-color: var(--cor-principal);
-  color: var(--cor-destaque);
-  border: none;
-  border-radius: 15px;
-  padding: 15px;
-  transition: background-color 0.3s;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-destaque-brilho);
+  border: 3px solid var(--cor-destaque);
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 6px 0px var(--cor-destaque);
+  /* Física estilo mola/chiclete */
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  position: relative;
 }
+
+/* Hover no botão: ele pula, se inclina e brilha! */
 button:hover {
   background-color: var(--cor-destaque);
-  color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  transform: translateY(-7deg) rotate(3deg) scale(1.1);
+  box-shadow: 0 12px 20px rgba(168, 85, 247, 0.6),
+              0 0 15px var(--cor-surpresa);
+}
+
+/* Clique no botão: ele achata feio feito chiclete pisado! */
+button:active {
+  transform: translateY(3deg) scale(0.9, 0.8) rotate(-2deg);
+  box-shadow: 0 2px 0px var(--cor-destaque);
+}
+
+/* Keyframes de animações engraçadas */
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes dancinha {
+  0% { transform: rotate(-5deg) scale(1.05); }
+  100% { transform: rotate(5deg) scale(1.1); }
 }
