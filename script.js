@@ -26,11 +26,11 @@ const perguntas = [
             alternativas: [
                 {
                     texto: "Investir em Skincare, alimentação equilibrada e hábitos diários (Clean Beauty) para manter a aparência saudável naturalmente.",
-                    afirmacao: "Você demonstra um perfil  de pesquisador e inovador que busca por meio da inovação soluções para o meio ambiente e sustentabilidade das gerações posteriores."
+                    afirmacao: "O Adepto do Cuidado Diário. Acredita na constância de rotinas não invasivas e na beleza como reflexo de hábitos saudáveis."
                 },
                 {
-                    texto:  "Seria interessante explorar primeiramente fontes renováveis exotérmicas, em segundo plano utilizar a energia geotérmica apesar dos custos elevados de explorações e possibilidades de contaminação de rios. ",
-                    afirmacao: "Você é uma pessoa que dá ênfase em priorizar os recursos disponíveis, pensando no meio ambiente e sem descartar o viés econômico."
+                    texto:  "Buscar procedimentos estéticos injetáveis ou tecnológicos de efeito imediato (como toxina botulínica ou lasers).",
+                    afirmacao: "O Entusiasta da Alta Tecnologia. Prioriza a eficiência tecnológica, soluções diretas e a otimização de tempo."
                 }    
                
             ]
