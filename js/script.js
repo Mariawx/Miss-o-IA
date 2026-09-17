@@ -42,12 +42,18 @@ mostraPergunta();
 } 
 
 
-function mostraResultado(){
-    caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
-    textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = "";
+function mostraResultado() {
+caixaPerguntas.textContent = "Em 2049...";
+textoResultado.textContent = historiaFinal;
+caixaAlternativas.textContent = "";
+botaoJogarNovamente.addEventListener("click", jogaNovamente());
+
 }
+const botaoJogarNovamente = document.querySelector(“.novamente-btn”);
 
-
+function jogaNovamente(){
+    atual = 0;
+    historiaFinal = "";
+    mostraPergunta();
 
 mostraPergunta();
