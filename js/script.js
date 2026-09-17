@@ -27,10 +27,7 @@ function mostraAlternativas(){
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
-    function aleatorio(lista) {
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
-}
+   
 
 
 function respostaSelecionada(opcaoSelecionada) {
