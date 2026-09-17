@@ -1,6 +1,9 @@
 export function aleatorio(lista) {
-    const posicao = Math.floor(Math.random() * lista.length);
-    return lista[posicao];
+    if (Array.isArray(lista)) {
+        const posicao = Math.floor(Math.random() * lista.length);
+        return lista[posicao];
+    }
+    return lista;
 }
 export function aleatorio(texto) {
     return texto;
