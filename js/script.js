@@ -41,19 +41,20 @@ atual++;
 mostraPergunta();
 } 
 
-
 function mostraResultado() {
 caixaPerguntas.textContent = "Em 2049...";
 textoResultado.textContent = historiaFinal;
 caixaAlternativas.textContent = "";
-botaoJogarNovamente.addEventListener("click", jogaNovamente());
-
+caixaResultado.classList.add("mostrar"); botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
+
 const botaoJogarNovamente = document.querySelector(“.novamente-btn”);
 
-function jogaNovamente(){
-    atual = 0;
-    historiaFinal = "";
-    mostraPergunta();
+function jogaNovamente() {
+atual = 0;
+historiaFinal = "";
+caixaResultado.classList.remove("mostrar");
+mostraPergunta();
+}
 
 mostraPergunta();
