@@ -32,6 +32,14 @@ function mostraAlternativas() {
     }
 }
 
+ function aleatorio(lista) {
+    if (Array.isArray(lista)) {
+        const posicao = Math.floor(Math.random() * lista.length);
+        return lista[posicao];
+    }
+    return lista;
+}
+
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
