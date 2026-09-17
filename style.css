@@ -154,3 +154,11 @@ button:active {
   80% { transform: scale(1.1); opacity: 1; }
   100% { transform: scale(1); }
 }
+
+.caixa-resultado{
+    display: none;
+}
+
+.caixa-resultado.mostrar{
+    display: block;
+}
