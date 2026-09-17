@@ -8,7 +8,7 @@
   --cor-destaque: #a855f7;
   --cor-destaque-brilho: #e0aaff;
   --cor-texto: #f3e8ff;
-  --cor-surpresa: #ff007f; /* Rosa choque para dar um susto legal */
+  --cor-surpresa: #ff007f;
 }
 
 /* =========================================
@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Fredoka', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 h1 {
@@ -43,7 +43,6 @@ h1:hover {
   animation: dancinha 0.5s ease-in-out infinite alternate;
 }
 
-/* Os botões das alternativas que o JavaScript vai gerar */
 button {
   background-color: var(--cor-secundaria);
   color: var(--cor-destaque-brilho);
@@ -55,7 +54,7 @@ button {
   cursor: pointer;
   outline: none;
   box-shadow: 0 6px 0px var(--cor-destaque);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efeito elástico */
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   width: 100%;
 }
 
@@ -75,25 +74,24 @@ button:active {
    3. CLASSES DO PROJETO (Layout e Caixas)
    ========================================= */
 
-/* Caixa principal que engloba tudo */
 .caixa-principal {
   background-color: var(--cor-principal);
   width: 90%;
   max-width: 500px;
   text-align: center;
   padding: 40px 30px;
-  border-radius: 35px 15px 35px 15px; /* Formato engraçado e tortinho */
+  border-radius: 35px 15px 35px 15px;
   border: 3px solid var(--cor-secundaria);
   box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25), 0 0 15px rgba(168, 85, 247, 0.15);
   animation: flutuar 4s ease-in-out infinite;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 20px 0;
 }
 
 .caixa-principal:hover {
   transform: rotate(-1.5deg) scale(1.02);
 }
 
-/* Área onde a pergunta vai aparecer */
 .caixa-perguntas {
   font-size: 1.3rem;
   font-weight: bold;
@@ -101,37 +99,33 @@ button:active {
   margin-bottom: 20px;
 }
 
-/* Organização dos botões de alternativas */
 .caixa-alternativas {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaço entre os botões */
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-/* Caixa onde o resultado final aparece (pode virar uma surpresa!) */
 .caixa-resultado {
   background-color: var(--cor-secundaria);
   border: 2px dashed var(--cor-destaque);
   border-radius: 20px;
   padding: 15px;
   margin-top: 20px;
-   display: none;
-  /* Geralmente o display é controlado pelo script.js para aparecer só no final, 
-     mas deixei uma animação pronta para quando ele surgir! */
+  display: none;
   animation: aparecerGelatina 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.caixa-resultado.mostrar{
-    display: block;
+.caixa-resultado.mostrar {
+  display: block;
 }
 
-/* Texto final do resultado */
 .texto-resultado {
   font-size: 1.2rem;
   color: var(--cor-surpresa);
   font-weight: bold;
   text-shadow: 0 0 8px rgba(255, 0, 127, 0.6);
+  margin-bottom: 15px;
 }
 
 /* =========================================
@@ -159,4 +153,3 @@ button:active {
   80% { transform: scale(1.1); opacity: 1; }
   100% { transform: scale(1); }
 }
-
