@@ -44,7 +44,7 @@ export const perguntas = [
             {
                 texto: "Analisar o portfólio de casos reais de 'antes e depois' e as avaliações de outros clientes sobre o profissional.",
                 afirmacao:[ "O Avaliador de Resultados. Focado na reputação prática do profissional e na consistência visual dos trabalhos entregues.",
-                            "O Avaliador de Resultados. Focado na reputação prática do profissional e na consistência visual dos trabalhos entregues."
+                            "Tomar decisões com base em evidências visuais e na experiência real compartilhada por outros consumidores."
                 ]
             }    
         ]
