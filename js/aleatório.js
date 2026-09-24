@@ -5,6 +5,3 @@ export function aleatorio(lista) {
     }
     return lista;
 }
-export function aleatorio(texto) {
-    return texto;
-}
