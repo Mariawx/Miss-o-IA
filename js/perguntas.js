@@ -23,6 +23,7 @@ export const perguntas = [
                 texto: "Investir em Skincare, alimentação equilibrada e hábitos diários (Clean Beauty) para manter a aparência saudável naturalmente.",
                 afirmacao: ["O Adepto do Cuidado Diário. Acredita na constância de rotinas não invasivas e na beleza como reflexo de hábitos saudáveis.",
                         "Entende que o autocuidado é um estilo de vida e prioriza produtos naturais e prevenção contínua."
+                ]
             },
             {
                 texto: "Buscar procedimentos estéticos injetáveis ou tecnológicos de efeito imediato (como toxina botulínica ou lasers).",
