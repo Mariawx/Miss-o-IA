@@ -1,4 +1,4 @@
-import { aleatorio } from './aleatorio.js';
+import { aleatório } from './aleatório.js';
 import { perguntas } from './perguntas.js';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
@@ -33,7 +33,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+    const afirmacoes = aleatório(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++;
     mostraPergunta();
