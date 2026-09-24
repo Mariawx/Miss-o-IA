@@ -16,7 +16,7 @@ export const perguntas = [
         enunciado: "Diante de uma nova tendência de beleza que viralizou nas redes sociais, qual é a sua atitude?",
         alternativas: [
             {
-                texto: "Investir em Skincare, alimentação equilibrada e hábitos diários (Clean Beauty) para manter a aparência saudável naturally.",
+                texto: "Investir em Skincare, alimentação equilibrada e hábitos diários (Clean Beauty) para manter a aparência saudável naturalmente.",
                 afirmacao: "O Adepto do Cuidado Diário. Acredita na constância de rotinas não invasivas e na beleza como reflexo de hábitos saudáveis."
             },
             {
