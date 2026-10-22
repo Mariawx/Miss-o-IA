@@ -40,7 +40,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "Seu resultado do quizziz";
+    caixaPerguntas.textContent = "Em 2049";
     textoResultado.textContent = historiaFinal.trim();
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
