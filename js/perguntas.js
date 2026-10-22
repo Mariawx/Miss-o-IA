@@ -37,7 +37,8 @@ export const perguntas = [
             }    
         ]
     },
-    {
+   
+    
         enunciado: "Qual critério você considera indiscutível antes de fechar qualquer protocolo de estética avançada?",
         alternativas: [
             {
@@ -55,4 +56,4 @@ export const perguntas = [
                 ]
             }    
         ]
-    
+]
